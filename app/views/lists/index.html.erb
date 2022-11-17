@@ -1,12 +1,21 @@
-<div class="container">
-  <h1>All Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/free-vector/3d-film-strips-with-light-effect-background_1017-36683.jpg?w=1380&t=st=1668695795~exp=1668696395~hmac=eeb5506f3d06e01e8b5a87490170b8a0f336f587120c6fbf975462aafc685aab);">
+  <div class="container">
+    <h1>Movie List allows you to enjoy <strong>hidden gems</strong> in the world of <strong>cinema</strong>!</h1>
+    <p>Change your life and watch movies with the greatest minds on earth today.</p>
+  </div>
+</div>
 
-  <ul>
+<div class="container">
+  <h1 class="text-center my-5">All Lists</h1>
+  <%= link_to "Add a list", new_list_path, class: "btn btn-primary mb-3" %>
+  <div class="cards">
     <% @lists.each do |list| %>
-      <li>
-        <%= link_to list.name, list_path(list) %>
-      </li>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://de.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_7112/salle-de-cin%C3%A9ma-%7C-630x405-%7C-%C2%A9-fotolia-he2/12344768-1-fre-FR/Salle-de-cin%C3%A9ma-%7C-630x405-%7C-%C2%A9-Fotolia-he2.jpg)">
+      <%= link_to list.name, list_path(list) %>
+      </div>
     <% end %>
-  </ul>
-  <%= link_to "Add", new_list_path %>
+  </div>
+
+
+
 </div>
